@@ -48,15 +48,15 @@ function click7() {
   alert(`${name} Prakash `); // remember to use the `` symbol and the $ symbol
 }
 
-// doing DOM manupulation from  here
+// doing DOM manupulation from  here------------------------------------
 function change() {
-  //DOM getElementById  ----Example
+  //DOM getElementById  ----Example-------------------------
   var paragraph_heading = document.getElementById("heading");
   paragraph_heading.style.fontSize = "3rem";
   paragraph_heading.innerHTML = "<b>This is the new data after DOM </b>";
   paragraph_heading.style.color = "red";
 }
-//DOM getElementByClassName ---Example
+//DOM getElementByClassName ---Example---------------------
 function paragraph() {
   var list_items = document.getElementsByClassName("list ");
   for (var i = 0; i < list_items.length; i++) {
@@ -71,7 +71,7 @@ function paragraph() {
   paragraph_heading.style.color = "cyan";
 }
 
-//DOM getElementByTagName ---Example
+//DOM getElementByTagName ---Example-------------------------------
 function tag() {
   var tag_Dom = document.getElementsByTagName("h3");
 
@@ -81,6 +81,7 @@ function tag() {
   }
 }
 
+//Number generator-----------------------------------
 function generate_number() {
   var num = document.getElementById("num_value").value;
   var generatedNumbers = "";
