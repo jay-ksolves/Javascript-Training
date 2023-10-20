@@ -50,22 +50,34 @@ function click7() {
 
 // doing DOM manupulation from  here
 function change() {
-  // var paragraph1 = document.querySelector("#para1");
-  // console.log(paragraph1);
-  // var paragraph2 = document.querySelector("#para2");
-  // console.log(paragraph2);
-  // paragraph1.textContent = "I am changed by JavaScript!";
-  // console.log(paragraph1);
-  // paragraph2.textContent = "this is 2nd paragraph";
-  // console.log(paragraph2);
-  var h1 = document.querySelector("h1");
-  h1.textContent = "Hello jay prakash";
-  document.body.appendChild(h1);
-  console.log(h1);
-  h1.style.color = "white";
-  h1.style.fontSize = "16px";
+  //DOM getElementById  ----Example
+  var paragraph_heading = document.getElementById("heading");
+  paragraph_heading.style.fontSize = "3rem";
+  paragraph_heading.innerHTML = "<b>This is the new data after DOM </b>";
+  paragraph_heading.style.color = "red";
+}
+//DOM getElementByClassName ---Example
+function paragraph() {
+  var list_items = document.getElementsByClassName("list ");
+  for (var i = 0; i < list_items.length; i++) {
+    list_items[i].innerHTML = "<em>Now this is changed line.</em>";
+    list_items[i].style.fontSize = "1.3rem";
+    list_items[i].style.color = "orange";
+  }
+
+  var paragraph_heading = document.getElementById("heading");
+  paragraph_heading.style.fontSize = "3rem";
+  paragraph_heading.innerHTML = "<b>Again Changed</b>";
+  paragraph_heading.style.color = "cyan";
 }
 
-var inside_paragraph = document.getElementByClassNam("para1");
-console.log(inside_paragraph);
+//DOM getElementByTagName ---Example
+function tag() {
+  var tag_Dom = document.getElementsByTagName("h3");
+
+  for (var i = 0; i < tag_Dom.length; i++) {
+    tag_Dom[i].innerHTML = "<b>hello ji, done by tagname</b>";
+    tag_Dom[i].style.color = "green";
+  }
+}
 // "use strict"

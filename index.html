@@ -44,10 +44,10 @@
             This is the heading.
         </h1>
         <ul>
-            <li>
+            <li class="list">
                 First item.
             </li>
-            <li>
+            <li class="list">
                 second item.
             </li>
         </ul>
@@ -55,12 +55,17 @@
         <p class="para2">hey you can see this line on your console also, please check.</p>
 
     </div>
-    <div class="card text-white">
-        <button onclick="change()">
-            <h1>jay</h1>
+    <div class="container text-white p-3 d-grid d-flex gap-2">
+        <button onclick="change()" class="btn  btn-outline-secondary ">
+            <h3>Clickme to see DOM for Heading ID !!</h3>
+        </button>
+        <button onclick="paragraph()" class="btn  btn-outline-primary ">
+            <h3>Clickme to see DOM for Class list!!</h3>
+        </button>
+        <button onclick="tag()" class="btn  btn-outline-info ">
+            <h3>Clickme to see DOM for tagname!!</h3>
         </button>
     </div>
-
 
     <script src="index.js"></script>
 </body>

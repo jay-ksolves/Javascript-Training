@@ -3,10 +3,10 @@
 }
 
 body {
-    margin: 0;
-    background-image: url("/home/jayksi157/js/day1/assests/images/32822.jpg");
-    background-position: cover;
-    background-size: 100%;
-    background-repeat: none;
-    
-  }
+  margin: 0;
+  background-image: url("assests/images/32822.jpg");
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: none;
+  background-color: black;
+}
