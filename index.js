@@ -48,5 +48,24 @@ function click7() {
   alert(`${name} Prakash `); // remember to use the `` symbol and the $ symbol
 }
 
+// doing DOM manupulation from  here
+function change() {
+  // var paragraph1 = document.querySelector("#para1");
+  // console.log(paragraph1);
+  // var paragraph2 = document.querySelector("#para2");
+  // console.log(paragraph2);
+  // paragraph1.textContent = "I am changed by JavaScript!";
+  // console.log(paragraph1);
+  // paragraph2.textContent = "this is 2nd paragraph";
+  // console.log(paragraph2);
+  var h1 = document.querySelector("h1");
+  h1.textContent = "Hello jay prakash";
+  document.body.appendChild(h1);
+  console.log(h1);
+  h1.style.color = "white";
+  h1.style.fontSize = "16px";
+}
 
+var inside_paragraph = document.getElementByClassNam("para1");
+console.log(inside_paragraph);
 // "use strict"
