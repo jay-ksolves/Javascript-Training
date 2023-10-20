@@ -18,6 +18,10 @@
 
 <body>
 
+    <a href="#"> <img src="/home/jayksi157/js/day1/assests/google.svg" alt="" width="100px" class="mt-3 "
+            onclick="confirm('are you all right?')">
+    </a>
+
     <!-- let var const alert -->
     <div class="container mt-5">
         <div class="container p-5 m-8 card">
@@ -57,16 +61,28 @@
     </div>
     <div class="container text-white p-3 d-grid d-flex gap-2">
         <button onclick="change()" class="btn  btn-outline-secondary ">
-            <h3>Clickme to see DOM for Heading ID !!</h3>
+            <h3>click me to see DOM for Heading ID !!</h3>
         </button>
         <button onclick="paragraph()" class="btn  btn-outline-primary ">
-            <h3>Clickme to see DOM for Class list!!</h3>
+            <h3>click me to see DOM for Class list!!</h3>
         </button>
         <button onclick="tag()" class="btn  btn-outline-info ">
-            <h3>Clickme to see DOM for tagname!!</h3>
+            <h3>click me to see DOM for tagname!!</h3>
         </button>
     </div>
+    <hr>
+    <br>
+    <div class="container card bg-info text-center  p-4 d-grid gap-3">
+        <h1 onclick="alert('this is a number generator.!')" class="bg-dark text-info p-5 btn-lg">Number Generator</h1>
+        <input type="text" id="num_value" placeholder="Enter Number till you have to generate the numbers "
+            class="form-control ">
+        <button onclick="generate_number();" class="btn btn-outline-success btn-lg">Generate</button>
 
+        <div class="card bg-primary text-white p-4">
+            <h3 id="generated" class="p-3">Result is:</h3>
+        </div>
+    </div>
+    <br>
     <script src="index.js"></script>
 </body>
 

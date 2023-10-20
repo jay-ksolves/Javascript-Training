@@ -80,4 +80,19 @@ function tag() {
     tag_Dom[i].style.color = "green";
   }
 }
+
+function generate_number() {
+  var num = document.getElementById("num_value").value;
+  var generatedNumbers = "";
+  if (num <= 100) {
+    for (var i = 1; i <= num; i++) {
+      // generatedNumbers += i + " ";
+      generatedNumbers = generatedNumbers + i + " ,    ";
+    }
+  } else {
+    generatedNumbers = "Please enter a number less than or equal to 100.";
+  }
+  var result = document.getElementById("generated");
+  result.textContent = "Result is:  " + generatedNumbers;
+}
 // "use strict"
