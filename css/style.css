@@ -1,3 +1,12 @@
-.body{
-    background-color: #676363;
+* {
+  margin: 0;
 }
+
+body {
+    margin: 0;
+    background-image: url("/home/jayksi157/js/day1/assests/images/32822.jpg");
+    background-position: cover;
+    background-size: 100%;
+    background-repeat: none;
+    
+  }

@@ -17,14 +17,42 @@
 </head>
 
 <body>
+
+    <!-- let var const alert -->
     <div class="container mt-5">
         <div class="container p-5 m-8 card">
             <h1>content before the script</h1>
-            <button onclick="clickme();"> Click me & See magic !</button>
+            <button onclick="click1();" class="btn btn-secondary">1. Click me & See magic !</button>
             <h3>content after the script</h3>
         </div>
+        <div class="container p-2 d-flex d-grid gap-3">
+            <button onclick="click2();" class="btn btn-primary">2. Click me & See magic !</button>
+            <button onclick="click3();" class="btn btn-info">3. Click me & See magic !</button>
+            <button onclick="click4();" class="btn btn-warning">4. Click me & See magic !</button>
+            <button onclick="click5();" class="btn btn-success">5. Click me & See magic !</button>
+            <button onclick="click6();" class="btn btn-danger">6. Click me & See magic !</button>
+            <button onclick="click7();" class="btn btn-dark">7. Click me & See magic !</button>
 
+        </div>
     </div>
+
+    <br>
+    <!-- DOM selectors -->
+
+    <div class="container card bg-dark text-white">
+        <h1 id="heading">
+            This is the heading.
+        </h1>
+        <ul>
+            <li>
+                First item
+            </li>
+        </ul>
+    </div>
+
+
+
+
     <script src="index.js"></script>
 </body>
 
