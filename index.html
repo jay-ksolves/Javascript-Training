@@ -64,7 +64,10 @@
         <p class="para2">hey you can see this line on your console also, please check.</p>
 
     </div>
-    <div class="container text-white p-3 d-grid d-flex gap-2">
+    <br>
+    <div class="container  card text-white p-4  d-flex gap-2 justify-content-between">
+        <h2 class="text-dark text-center"> DOM Manipulation Buttons</h2>
+        <hr style="border: none; border-top: 10px dotted rgb(11, 141, 32); font-weight: bolder;">
         <button onclick="change()" class="btn  btn-outline-secondary ">
             <h3>click me to see DOM for Heading ID !!</h3>
         </button>
@@ -74,14 +77,18 @@
         <button onclick="tag()" class="btn  btn-outline-info ">
             <h3>click me to see DOM for tagname!!</h3>
         </button>
+
+        <div id="container1">
+            <p>Now it is changed</p>
+        </div>
     </div>
     <hr>
     <br>
     <div class="container card bg-info text-center  p-4 d-grid gap-3">
         <h1 onclick="alert('this is a number generator.!')" class="bg-dark text-info p-5 fs-1 btn-lg">Number Generator
         </h1>
-        <input type="text" id="num_value" placeholder="Enter Number till you have to generate the numbers "
-            class="form-control ">
+        <input type="text" id="num_value"
+            placeholder="Enter Number till you have to generate the numbers (less than 100)" class="form-control ">
         <button onclick="generate_number();" class="btn btn-outline-success btn-lg">Generate</button>
 
         <div class="card bg-primary text-white p-4">
@@ -89,7 +96,48 @@
         </div>
     </div>
     <br>
+    <div class="container  bg-dark text-white p-2 ">
+        <h1 class="text-center text-secondary">Arrays , String, Object and sets</h1>
+        <hr style="border: none; border-top: 10px dotted rgb(197, 237, 219); font-weight: bolder;">
 
+        <h2 class=" text-secondary"> Array</h2>
+        <hr>
+        <button onclick="arr();" class="btn btn-primary">Array</button>
+    </div>
+    <br>
+    <div class="container bg-secondary">
+        <h1 class="text-center text-warning">Temperature convertor</h1>
+        <hr style="border: none; border-top: 10px dotted rgb(197, 237, 219); font-weight: bolder;">
+        <div class="container  bg-dark card p-3 gap-3 d-flex d-grid justify-content-between text-white">
+            <hr>
+            <p class="text-center text-white fs-3">Celsius to Fahrenheit</p>
+            <hr>
+            <input type="text" name="" id="tempinC" placeholder="Enter Temperature in celsius °C" class="form-control">
+            <button onclick="CtoF();" class="btn btn-info">
+                <h2>Convert C To F</h2>
+            </button>
+            <div class="card text-dark p-3">
+                <h5>Result in fahrenheit :
+                    <h5 id="resultinF" class="text-info">-_-</h5>
+                </h5>
+            </div>
+            <hr>
+            <p class="text-center text-white fs-3">Fahrenheit to celsius</p>
+            <hr>
+            <input type="text" name="" id="tempinF" placeholder="Enter Temperature in Fahrenheit °F"
+                class="form-control">
+            <button onclick="FtoC();" class="btn btn-primary">
+                <h2>Convert F TO C</h2>
+            </button>
+            <div class="card text-dark p-3">
+                <h5>Result in Celsius:
+                    <h5 id="resultinC" class="text-info">-_-</h5>
+                </h5>
+            </div>
+        </div>
+
+        <br><br>
+    </div>
     <script src="index.js"></script>
 </body>
 

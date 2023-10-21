@@ -81,6 +81,13 @@ function tag() {
   }
 }
 
+// Create a new element ---DOM Manipulation
+var newElement = document.createElement("h2");
+newElement.textContent = "This is a new paragraph.";
+var existingElement = document.getElementById("container1");
+existingElement.style.color = "cyan";
+existingElement.appendChild(newElement);
+
 //Number generator-----------------------------------
 function generate_number() {
   var num = document.getElementById("num_value").value;
@@ -97,3 +104,32 @@ function generate_number() {
   result.textContent = "Result is:  " + generatedNumbers;
 }
 // "use strict"
+
+function arr() {
+  console.log("hello");
+  alert("check console");
+  let array = [5, 6, 7];
+  const myArray = array.map((item) => {
+    return item * 2;
+  });
+  console.log(myArray);
+}
+
+// Temperature conversion
+function CtoF() {
+  console.log("Conversion from C to F");
+  var temp_in_celsius = document.getElementById("tempinC").value;
+  var temp_in_fahrenheit = (parseFloat(temp_in_celsius) * 9) / 5 + 32;
+  var converted_result = document.getElementById("resultinF");
+  converted_result.textContent = temp_in_fahrenheit + " " + "°F";
+  console.log(temp_in_fahrenheit + " " + "°F");
+}
+
+function FtoC() {
+  console.log("Conversion from F to C");
+  var temp_in_fahrenheit = document.getElementById("tempinF").value;
+  var temp_in_celsius = (parseFloat(temp_in_fahrenheit) - 32) / 1.8;
+  var converted_result1 = document.getElementById("resultinC");
+  converted_result1.textContent = temp_in_celsius + " " + "°C";
+  console.log(temp_in_celsius + " " + "°C");
+}
