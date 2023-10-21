@@ -4,8 +4,25 @@
 
 body {
   margin: 0;
-  background-image: url("assests/images/32822.jpg");
+  background-image: url("/home/jayksi157/js/day1/assests/images/32822.jpg");
   background-position: cover;
   background-size: 100%;
   background-repeat: none;
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  .container {
+    flex-direction: column;
+  }
+  .fs-3 {
+    font-size: 2rem;
+  }
+  .col-md-6,
+  .col-md-3,
+  .col-md-2 {
+    width: 100%;
+  }
+
 }

@@ -48,24 +48,88 @@ function click7() {
   alert(`${name} Prakash `); // remember to use the `` symbol and the $ symbol
 }
 
-// doing DOM manupulation from  here
+// doing DOM manupulation from  here------------------------------------
 function change() {
-  // var paragraph1 = document.querySelector("#para1");
-  // console.log(paragraph1);
-  // var paragraph2 = document.querySelector("#para2");
-  // console.log(paragraph2);
-  // paragraph1.textContent = "I am changed by JavaScript!";
-  // console.log(paragraph1);
-  // paragraph2.textContent = "this is 2nd paragraph";
-  // console.log(paragraph2);
-  var h1 = document.querySelector("h1");
-  h1.textContent = "Hello jay prakash";
-  document.body.appendChild(h1);
-  console.log(h1);
-  h1.style.color = "white";
-  h1.style.fontSize = "16px";
+  //DOM getElementById  ----Example-------------------------
+  var paragraph_heading = document.getElementById("heading");
+  paragraph_heading.style.fontSize = "3rem";
+  paragraph_heading.innerHTML = "<b>This is the new data after DOM </b>";
+  paragraph_heading.style.color = "red";
+}
+//DOM getElementByClassName ---Example---------------------
+function paragraph() {
+  var list_items = document.getElementsByClassName("list ");
+  for (var i = 0; i < list_items.length; i++) {
+    list_items[i].innerHTML = "<em>Now this is changed line.</em>";
+    list_items[i].style.fontSize = "1.3rem";
+    list_items[i].style.color = "orange";
+  }
+
+  var paragraph_heading = document.getElementById("heading");
+  paragraph_heading.style.fontSize = "3rem";
+  paragraph_heading.innerHTML = "<b>Again Changed</b>";
+  paragraph_heading.style.color = "cyan";
 }
 
-var inside_paragraph = document.getElementByClassNam("para1");
-console.log(inside_paragraph);
+//DOM getElementByTagName ---Example-------------------------------
+function tag() {
+  var tag_Dom = document.getElementsByTagName("h3");
+
+  for (var i = 0; i < tag_Dom.length; i++) {
+    tag_Dom[i].innerHTML = "<b>hello ji, done by tagname</b>";
+    tag_Dom[i].style.color = "green";
+  }
+}
+
+// Create a new element ---DOM Manipulation
+var newElement = document.createElement("h2");
+newElement.textContent = "This is a new paragraph.";
+var existingElement = document.getElementById("container1");
+existingElement.style.color = "cyan";
+existingElement.appendChild(newElement);
+
+//Number generator-----------------------------------
+function generate_number() {
+  var num = document.getElementById("num_value").value;
+  var generatedNumbers = "";
+  if (num <= 100) {
+    for (var i = 1; i <= num; i++) {
+      // generatedNumbers += i + " ";
+      generatedNumbers = generatedNumbers + i + " ,    ";
+    }
+  } else {
+    generatedNumbers = "Please enter a number less than or equal to 100.";
+  }
+  var result = document.getElementById("generated");
+  result.textContent = "Result is:  " + generatedNumbers;
+}
 // "use strict"
+
+function arr() {
+  console.log("hello");
+  alert("check console");
+  let array = [5, 6, 7];
+  const myArray = array.map((item) => {
+    return item * 2;
+  });
+  console.log(myArray);
+}
+
+// Temperature conversion
+function CtoF() {
+  console.log("Conversion from C to F");
+  var temp_in_celsius = document.getElementById("tempinC").value;
+  var temp_in_fahrenheit = (parseFloat(temp_in_celsius) * 9) / 5 + 32;
+  var converted_result = document.getElementById("resultinF");
+  converted_result.textContent = temp_in_fahrenheit + " " + "°F";
+  console.log(temp_in_fahrenheit + " " + "°F");
+}
+
+function FtoC() {
+  console.log("Conversion from F to C");
+  var temp_in_fahrenheit = document.getElementById("tempinF").value;
+  var temp_in_celsius = (parseFloat(temp_in_fahrenheit) - 32) / 1.8;
+  var converted_result1 = document.getElementById("resultinC");
+  converted_result1.textContent = temp_in_celsius + " " + "°C";
+  console.log(temp_in_celsius + " " + "°C");
+}
