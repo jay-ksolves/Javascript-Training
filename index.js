@@ -133,29 +133,61 @@ function FtoC() {
   converted_result1.textContent = temp_in_celsius + " " + "°C";
   console.log(temp_in_celsius + " " + "°C");
 }
+//To DO list-----------------------------------------------------
 
-//  function AddTask() {
-
-//   var taskInput = document.getElementById("input_task");
-//     var task = taskInput.value;
-//   let list_items = document.getElementById("Added_Task");
-//   list_items.innerHTML =
-//   for(var i=0;i<5;i++){
-//     list_items.innerHTML+= `<li>${task}</li>`;
-//   }
-// }
+window.addEventListener("DOMContentLoaded", () => {
+  const storedTasks = localStorage.getItem("tasks");
+  if (storedTasks) {
+    const taskList = document.getElementById("Added_Task");
+    taskList.innerHTML = ""; // Clear the previous content
+    taskList.innerHTML = storedTasks;
+    addDeleteButtons();
+  }
+});
 
 function AddTask() {
   var taskInput = document.getElementById("input_task");
   var task = taskInput.value;
 
   if (task == "") {
-    alert("Please provide any task input");
+    alert("Please provide a task input");
   } else {
     var listItem = document.createElement("li");
     listItem.textContent = task;
     var taskList = document.getElementById("Added_Task");
     taskList.appendChild(listItem);
     taskInput.value = "";
+
+    addDeleteButton(listItem);
+
+    localStorage.setItem("tasks", taskList.innerHTML);
+  }
+}
+
+function addDeleteButton(taskItem) {
+  var deleteButton = document.createElement("button");
+  deleteButton.textContent = "  ";
+  deleteButton.className += "delete-btn";
+  deleteButton.classList.add(
+    "fa",
+    "fa-solid",
+    "fa-trash",
+    "btn",
+    "btn-danger",
+    "m-2"
+  );
+  deleteButton.addEventListener("click", function () {
+    taskItem.remove();
+    localStorage.setItem("tasks", Added_Task.innerHTML);
+  });
+
+  taskItem.appendChild(deleteButton);
+}
+
+function addDeleteButtons() {
+  var taskList = document.getElementById("Added_Task");
+  var tasks = taskList.getElementsByTagName("li");
+  for (var i = 0; i < tasks.length; i++) {
+    addDeleteButton(tasks[i]);
   }
 }
