@@ -138,10 +138,21 @@
         <br>
     </div>
     <br><br>
-    <div class="container card card bg-success p-4 border-light">
-        <h1 class="text-white">To Do list</h1>
-        <br>
+    <div class="container card card bg- p-4  border-light">
+        <hr>
+        <h1 class="text-info text-center">To Do list</h1>
+        <hr>
+        <div class="d-grid gap-2 justify-content d-flex m-3 ">
+            <input type="text" id="input_task" class="form-control" placeholder="Add a task">
+            <button class="btn btn-primary " onclick="AddTask();">ADD</button>
+        </div>
+        <div class="card bg-dark text-white p-3 m-3 ">
+            <ol id="Added_Task">
+            </ol>
+        </div>
     </div>
+    <br>
+    <br>
     <script src="index.js"></script>
 </body>
 

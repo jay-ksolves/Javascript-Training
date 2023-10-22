@@ -117,7 +117,7 @@ function arr() {
 
 // Temperature conversion
 function CtoF() {
-  console.log("Conversion from C to F");
+  console.log("Conversion from °C to °F");
   var temp_in_celsius = document.getElementById("tempinC").value;
   var temp_in_fahrenheit = (parseFloat(temp_in_celsius) * 9) / 5 + 32;
   var converted_result = document.getElementById("resultinF");
@@ -126,10 +126,36 @@ function CtoF() {
 }
 
 function FtoC() {
-  console.log("Conversion from F to C");
+  console.log("Conversion from °F to °C");
   var temp_in_fahrenheit = document.getElementById("tempinF").value;
   var temp_in_celsius = (parseFloat(temp_in_fahrenheit) - 32) / 1.8;
   var converted_result1 = document.getElementById("resultinC");
   converted_result1.textContent = temp_in_celsius + " " + "°C";
   console.log(temp_in_celsius + " " + "°C");
+}
+
+//  function AddTask() {
+
+//   var taskInput = document.getElementById("input_task");
+//     var task = taskInput.value;
+//   let list_items = document.getElementById("Added_Task");
+//   list_items.innerHTML =
+//   for(var i=0;i<5;i++){
+//     list_items.innerHTML+= `<li>${task}</li>`;
+//   }
+// }
+
+function AddTask() {
+  var taskInput = document.getElementById("input_task");
+  var task = taskInput.value;
+
+  if (task == "") {
+    alert("Please provide any task input");
+  } else {
+    var listItem = document.createElement("li");
+    listItem.textContent = task;
+    var taskList = document.getElementById("Added_Task");
+    taskList.appendChild(listItem);
+    taskInput.value = "";
+  }
 }
