@@ -191,3 +191,36 @@ function addDeleteButtons() {
     addDeleteButton(tasks[i]);
   }
 }
+
+//Dice Game-----------------------------------------------------------
+function dice_roll() {
+  console.log("Dice Rolled!");
+  var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+  console.log("random no for player 1 : " + randomNumber1);
+  var randomDiceImage = "dice" + randomNumber1 + ".png";
+  var imageSource = "../assests/images/" + randomDiceImage;
+  var image1 = document.querySelectorAll("img")[1];
+  image1.setAttribute("src", imageSource);
+
+  var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+  console.log("random no. for player 2: " + randomNumber2);
+  var imageSource2 = "../assests/images/" + "dice" + randomNumber2 + ".png";
+  var image2 = document
+    .querySelectorAll("img")[2]
+    .setAttribute("src", imageSource2);
+
+
+  if (randomNumber1 > randomNumber2) {
+    // alert("Player 1 wins!");
+    document.getElementById("winner").innerHTML = " Player 1 Wins!"
+    console.log("Player 1 wins");
+  } else if ((randomNumber1 < randomNumber2)) {
+
+    // alert("Player 2 wins!");
+    document.getElementById("winner").innerHTML = " Player 2 Wins!"
+    console.log("Player 2 wins");
+  } else {// alert("It's a tie!");
+    document.getElementById("winner").innerHTML = " It's a Tie!"
+    console.log("It's a Tie");
+  }
+}

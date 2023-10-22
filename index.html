@@ -16,6 +16,9 @@
     <script src="https://kit.fontawesome.com/33c005a0aa.js" crossorigin="anonymous"></script>
     <!-- link stylesheet  -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- fontstyle -->
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +26,7 @@
 
     <nav class="navbar bg-dark border-bottom border-body border-bottom border-body p-3 justify-content-center gap-5"
         data-bs-theme="dark">
-        <a href="#"> <img src="/home/jayksi157/js/day1/assests/google.svg" alt="" width="80px" class="mr-5 "
+        <a href="#"> <img src="../assests/google.svg" alt="" width="80px" class="mr-5 "
                 onclick="confirm('are you all right?')">
         </a>
         <h1 class=""> This is Learning path For JS Developers</h1>
@@ -90,7 +93,7 @@
         <h1 onclick="alert('this is a number generator.!')" class="bg-dark text-info p-5 fs-1 btn-lg">Number Generator
         </h1>
         <input type="text" id="num_value"
-            placeholder="Enter Number till you have to generate the numbers (less than 100)" class="form-control ">
+            placeholder="Enter Number till you have to generate the numbers (less than 150)" class="form-control ">
         <button onclick="generate_number();" class="btn btn-outline-success btn-lg">Generate</button>
 
         <div class="card bg-primary text-white p-4">
@@ -156,8 +159,42 @@
     <br>
     <br>
 
+    <div class="container  border-light p-5 text-center" style="background-color: #3498db; border-radius:50px">
+        <hr style="border: none; border-top: 10px dotted rgb(20, 23, 23); font-weight: bolder;">
+        <h1 class="text-center text-white"
+            style="background-color: #2c3e50; padding: 20px;border-radius:20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  font-family:cursive">
+            " Dice Game "</h1>
+        <hr style="border: none; border-top: 10px dotted rgb(12, 13, 13); font-weight: bolder;">
+        <br>
+        <div class="container d-flex justify-content-center align-items-center p-4">
+            <div class="row ">
+                <div class="col-md-6 p-2">
+                    <div class="text-center">
+                        <h1 class="player">Player 1</h1>
+                        <div class="shadow-sm p-4 ">
+                            <img src="../assests/images/dice6.png" alt="Avatar" width="150" height="150" class="img1 ">
+                        </div>
+                    </div>
+                </div>
 
-
+                <div class="col-md-6 p-2">
+                    <div class="text-center">
+                        <h1 class="player">Player 2</h1>
+                        <div class="shadow-sm  p-4 ">
+                            <img src="../assests/images/dice6.png" alt="Avatar" width="150" height="150" class="img2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h3 id="winner" class="fa fa-solid" style="letter-spacing: 1.2px;">
+            Guessing Winner..! ("Roll to see")
+        </h3>
+        <br>
+        <br>
+        <button class="btn btn-dark fa fa-solid btn-lg" onclick="dice_roll();">Roll</button>
+    </div>
 
     <script src="index.js"></script>
 </body>
