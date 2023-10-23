@@ -252,11 +252,11 @@ function fetchDataAndDisplay(url) {
 }
 
 document.getElementById("button1").addEventListener("click", () => {
-  fetchDataAndDisplay("http://demo9097967.mockable.io/webserviceDemo1");
+  fetchDataAndDisplay("https://demo9097967.mockable.io/webserviceDemo1");
 });
 
 document.getElementById("button2").addEventListener("click", () => {
-  fetchDataAndDisplay("http://demo9097967.mockable.io/webserviceDemo2");
+  fetchDataAndDisplay("https://demo9097967.mockable.io/webserviceDemo2");
 });
 
 //---done ---------------------
