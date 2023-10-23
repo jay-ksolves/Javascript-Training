@@ -25,14 +25,14 @@ function function1(callback) {
     setTimeout(function () {
         console.log("function 1 executed..!.");
         callback();
-    }, 1000);
+    }, 600);
 }
 
 function function2(callback) {
     setTimeout(function () {
         console.log("function 2 executed..!.");
         callback();
-    }, 1000);
+    }, 800);
 }
 
 function function3(callback) {
@@ -62,7 +62,7 @@ function promiseFunction1() {
         setTimeout(() => {
             console.log("Function 1 executed via help of promises. .!.");
             resolve();
-        }, 1000);
+        }, 1100);
     });
 }
 
@@ -71,7 +71,7 @@ function promiseFunction2() {
         setTimeout(() => {
             console.log("Function 2 executed via help of promises...!.");
             resolve();
-        }, 1000);
+        }, 1300);
     });
 }
 
@@ -80,7 +80,7 @@ function promiseFunction3() {
         setTimeout(() => {
             console.log("Function 3 executed via help of promises..!.");
             resolve();
-        }, 1000);
+        }, 1500);
     });
 }
 
