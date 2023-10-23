@@ -209,18 +209,52 @@ function dice_roll() {
     .querySelectorAll("img")[2]
     .setAttribute("src", imageSource2);
 
-
   if (randomNumber1 > randomNumber2) {
     // alert("Player 1 wins!");
-    document.getElementById("winner").innerHTML = " Player 1 Wins!"
+    document.getElementById("winner").innerHTML = " Player 1 Wins!";
     console.log("Player 1 wins");
-  } else if ((randomNumber1 < randomNumber2)) {
-
+  } else if (randomNumber1 < randomNumber2) {
     // alert("Player 2 wins!");
-    document.getElementById("winner").innerHTML = " Player 2 Wins!"
+    document.getElementById("winner").innerHTML = " Player 2 Wins!";
     console.log("Player 2 wins");
-  } else {// alert("It's a tie!");
-    document.getElementById("winner").innerHTML = " It's a Tie!"
+  } else {
+    // alert("It's a tie!");
+    document.getElementById("winner").innerHTML = " It's a Tie!";
     console.log("It's a Tie");
   }
 }
+
+//web-service------------------------------------------------
+
+function fetchDataAndDisplay(url) {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Clicked on service");
+      const dataContainer = document.getElementById("data-container");
+      dataContainer.innerHTML = ""; 
+
+      if (data.length > 0) {
+        const ul = document.createElement("ul");
+        data.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item.name; 
+          ul.appendChild(li);
+        });
+        dataContainer.appendChild(ul);
+      } else {
+        dataContainer.textContent = "No data available.";
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
+
+document.getElementById("button1").addEventListener("click", () => {
+  fetchDataAndDisplay("http://demo9097967.mockable.io/webserviceDemo1");
+});
+
+document.getElementById("button2").addEventListener("click", () => {
+  fetchDataAndDisplay("http://demo9097967.mockable.io/webserviceDemo2");
+});
