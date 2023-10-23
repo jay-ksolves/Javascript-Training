@@ -1,8 +1,8 @@
 {
-  "name": "qr-code-generator",
+  "name": "qrcodegenerator",
   "version": "1.0.0",
-  "description": "This is a QRcode generator if user provide the link in the terminal",
-  "main": "index.js",
+  "description": "Hey this is a Qr code generator",
+  "main": "solution.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,9 @@
   "author": "Jay Prakash",
   "license": "ISC",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "inquirer": "^9.2.11",
     "qr-image": "^3.2.0"
   },
-  "devDependencies": {},
   "keywords": []
 }
