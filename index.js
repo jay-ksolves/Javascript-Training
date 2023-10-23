@@ -198,13 +198,13 @@ function dice_roll() {
   var randomNumber1 = Math.floor(Math.random() * 6) + 1;
   console.log("random no for player 1 : " + randomNumber1);
   var randomDiceImage = "dice" + randomNumber1 + ".png";
-  var imageSource = "./assests/images/" + randomDiceImage;
+  var imageSource = "../assests/images/" + randomDiceImage;
   var image1 = document.querySelectorAll("img")[1];
   image1.setAttribute("src", imageSource);
 
   var randomNumber2 = Math.floor(Math.random() * 6) + 1;
   console.log("random no. for player 2: " + randomNumber2);
-  var imageSource2 = "./assests/images/" + "dice" + randomNumber2 + ".png";
+  var imageSource2 = "../assests/images/" + "dice" + randomNumber2 + ".png";
   var image2 = document
     .querySelectorAll("img")[2]
     .setAttribute("src", imageSource2);

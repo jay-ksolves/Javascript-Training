@@ -1,7 +1,9 @@
+// Import required packages and modules
 import inquirer from "inquirer";
 import qr from "qr-image";
 import fs from "fs";
 
+// Prompt the user for input
 inquirer
   .prompt([
     {
@@ -11,13 +13,16 @@ inquirer
   ])
   .then((answers) => {
     console.log(answers);
-    const url = answers.URL;
-    var qr_svg = qr.image(url);
+    var urlInput = document.getElementById("link");
+    urlInput.innerHTML = answers;
+    // Generate the QR code
+    const qr_svg = qr.image(url);
     qr_svg.pipe(fs.createWriteStream("qr_img.png"));
 
+    // Save URL to a text file
     fs.writeFile("URL.txt", url, (err) => {
       if (err) throw err;
-      console.log("Your Qr code was generated.!");
+      console.log("Your QR code was generated.");
     });
   })
   .catch((error) => {
@@ -27,8 +32,29 @@ inquirer
       // Something else went wrong
     }
   });
-/* 
-1. Use the inquirer npm package to get user input.
-2. Use the qr-image npm package to turn the user entered URL into a QR code image.
-3. Create a txt file to save the user input using the native fs node module.
-*/
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const generateButton = document.getElementById("generate_qr");
+//   const urlInput = document.getElementById("url_link");
+//   const qrImage = document.querySelector("img");
+
+//   generateButton.addEventListener("click", () => {
+//     const url = urlInput.value;
+
+//     if (url.trim() === "") {
+//       alert("Please enter a valid URL.");
+//     } else {
+//       // Generate QR code
+//       const qr_svg = qr.imageSync(url, { type: 'png' });
+//       qrImage.src = "data:image/png;base64," + qr_svg.toString("base64");
+
+//       // Save URL to a text file
+//       const fs = require("fs");
+//       fs.writeFile("URL.txt", url, (err) => {
+//         if (err) throw err;
+//         console.log("Your QR code was generated.");
+//       });
+//     }
+//   });
+// });
