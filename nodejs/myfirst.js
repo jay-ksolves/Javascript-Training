@@ -59,3 +59,12 @@ var updating_txt_file = fs.appendFileSync(
 //   if (err) throw err;
 //   console.log("file deleted successfully");
 // });
+
+//reading file (here used utf-8 encoding rather than toString())-----
+var read_data = fs.readFileSync("myfile.txt", "utf-8", (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+console.log(read_data);
+
+
